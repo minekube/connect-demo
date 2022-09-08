@@ -1,0 +1,22 @@
+editions:
+  java:
+    enabled: true
+    config:
+      bind: :25565
+      bungeePluginChannelEnabled: false
+      shutdownReason: |
+        §cGate proxy is shutting down...
+        Please reconnect in a moment!
+
+# Configuration for Connect, a network that organizes all Minecraft servers/proxies
+# and makes them universally accessible for all players.
+# Among a lot of other features it even allows players to join locally hosted
+# Minecraft servers without having an open port or public IP address.
+#
+# Visit https://developers.minekube.com/connect
+connect:
+  service:
+    enabled: true
+    addr: :8080
+    publicTunnelServiceAddr: wss://connect-demo.fly.dev/tunnel
+    overrideRegistration: false

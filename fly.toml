@@ -1,0 +1,33 @@
+# fly.toml file generated for connect-demo on 2022-09-08T19:34:25+02:00
+
+app = "connect-demo"
+kill_signal = "SIGINT"
+kill_timeout = 5
+processes = []
+
+[experimental]
+  allowed_public_ports = []
+  auto_rollback = true
+
+[[services]]
+  internal_port = 25565
+  protocol = "tcp"
+
+  [[services.ports]]
+    port = "25565"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["tls", "http"]
+    port = "443"
+
+  [[services.tcp_checks]]
+    interval = 10000
+    timeout = 2000
