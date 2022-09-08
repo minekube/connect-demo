@@ -18,5 +18,5 @@ connect:
   service:
     enabled: true
     addr: :8080
-    publicTunnelServiceAddr: wss://connect-demo.fly.dev/tunnel
+    publicTunnelServiceAddr: wss://demo.minekube.net/tunnel
     overrideRegistration: false
