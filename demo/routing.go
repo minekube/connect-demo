@@ -21,7 +21,10 @@ func (p *plugin) onPreLogin(e *proxy.PreLoginEvent) {
 
 	server := p.Server(endpoint)
 	if server == nil {
-		e.Deny(endpointUnavailableText(endpoint))
+		e.Deny(&Text{Extra: []Component{
+			endpointUnavailableText(endpoint), &Text{Content: "\n\n"},
+			serversText(p.Servers()),
+		}})
 		return
 	}
 }
