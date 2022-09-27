@@ -36,7 +36,7 @@ func extractEndpoint(addr net.Addr) (string, bool) {
 	host := strings.ToLower(netutil.Host(addr))
 
 	// Remove forge client specific suffix
-	host = strings.Split(host, "\000")[0]
+	host = strings.SplitN(host, "\000", 1)[0]
 
 	if !strings.HasSuffix(host, domainSuffix) {
 		return "", false
