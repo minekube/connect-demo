@@ -13,10 +13,10 @@ editions:
 # Among a lot of other features it even allows players to join locally hosted
 # Minecraft servers without having an open port or public IP address.
 #
-# Visit https://developers.minekube.com/connect
+# Visit https://connect.minekube.com/
 connect:
   service:
     enabled: true
     addr: :8080
-    publicTunnelServiceAddr: wss://demo.minekube.net/tunnel
+    publicTunnelServiceAddr: wss://demo-connect.minekube.net/tunnel
     overrideRegistration: false
